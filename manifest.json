@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Catalyzer Extension",
+    "description": "Organization and productivity-enhancing Chrome extension",
+    "version": "1.0", 
+    "permissions": ["storage", "tabs"],
+    "chrome_url_overrides": {
+        "newtab": "homepage.html"
+    },
+    "icons": {
+        "16": "speed_graphics.png",
+        "32": "speed_graphics.png",
+        "48": "speed_graphics.png",
+        "128": "speed_graphics.png"
+    }
+    
+    
+}
