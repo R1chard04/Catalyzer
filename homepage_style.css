@@ -15,8 +15,9 @@
     text-align: center;
 }
 #motivational_quotes{
-    font-size: 0.3in;
+    font-size: 0.15in;
     font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
     text-align: center;
 }
 input[type="text"]
