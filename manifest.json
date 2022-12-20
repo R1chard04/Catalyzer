@@ -3,7 +3,7 @@
     "name": "Catalyzer Extension",
     "description": "Organization and productivity-enhancing Chrome extension",
     "version": "1.0", 
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage", "tabs", "scripting", "activeTab"],
     "chrome_url_overrides": {
         "newtab": "homepage.html"
     },
@@ -12,7 +12,18 @@
         "32": "speed_graphics.png",
         "48": "speed_graphics.png",
         "128": "speed_graphics.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon":{
+            "16": "speed_graphics.png",
+            "32": "speed_graphics.png",
+            "48": "speed_graphics.png",
+            "128": "speed_graphics.png"
+        }
     }
-    
     
 }
