@@ -14,7 +14,7 @@
         "128": "speed_graphics.png"
     },
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "/scripts/background.js"
     },
     "action": {
         "default_popup": "popup.html",
