@@ -20,17 +20,99 @@
     position: relative;
     text-align: center;
 }
-#bookmark-list{
-    background-color: turquoise;
+.bookmark-container-heading {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10%;
+    text-align: center;
     width: 400px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.bookmark-container-heading:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.bookmark-container-heading:focus {
+    outline: none;
+}
+
+.bookmark-container {
+    position: relative;
+    left: 20px;
+    border-radius: 4px;
+    background-color: lawngreen;
+    border: none;
+    color: #FFFFFF;
+    text-align:center;
+    font-size: 13px;
+    padding: 8px 16px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 4px 2px;
     height: 50px;
 }
-a.bookmark-container{
-    display: block;
-    height: 100%;
-    width: 100%;
+.bookmark-container span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.bookmark-container span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.bookmark-container:hover span {
+    padding-right: 50px;
+}
+.bookmark-container span:after {
+    opacity: 1;
+    right: 0;
+}
+.website-links {
     text-decoration: none;
 }
+.remove-bookmark-btn {
+    position: relative;
+    left: 30px;
+    border-radius: 8px;
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: left;
+    font-size: 12px;
+    margin: 4px 2px;
+    opacity: 1;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 66px;
+    height: 50px;
+}
+.remove-bookmark-btn:hover {opacity: 0.6}
 input[type="text"]
 {
     background: transparent;

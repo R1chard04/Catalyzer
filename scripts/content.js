@@ -42,7 +42,16 @@ function updateTime(){
 
 function display_past_websites(){
     var website1 = localStorage.getItem('1');
-    console.log('website1: ', JSON.parse(website1).name);
-    document.getElementById('first-link').href = `${JSON.parse(website1).url}`;
-    document.getElementById('past_websites').innerHTML = `Bookmarked Website: ${JSON.parse(website1).name} (${JSON.parse(website1).url})`;
+    console.log('website1: ', JSON.parse(website1).url);
+    var elements = document.getElementsByClassName('website-links');
+    for (var i = 0; i < elements.length; i++){
+      elements[i].href = `${JSON.parse(website1).url}`;
+      elements[i].innerHTML = `${JSON.parse(website1).name}`;
+    }
 }
+
+
+document.getElementById("first-linkbtn-del").onclick = function(){
+  window.localStorage.removeItem("1");
+}
+  

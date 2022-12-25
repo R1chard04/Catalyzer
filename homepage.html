@@ -13,12 +13,16 @@
     <h1 id="motivational_quotes"> </h1>
     <h1 id="currentTime"> </h1>
     <h1 id="greetingHeading"> </h1>
-    <h2>Bookmark List</h3>
-    <div id="bookmark-list">
-        <a href="chrome://newtab/" id="first-link" class="bookmark-container">
-            <h3 id="past_websites"> </h3>
-        </a>
+    <button type="button" id="bookmark-list-heading" class="bookmark-container-heading">BOOKMARK LIST</button><br>
+    <div id="bookmark-list-div">
+        <button type="button" id="first-linkbtn" class="bookmark-container">
+            <span>
+                <a href="chrome://newtab/" class="website-links">New Chrome Tab</a>
+            </span>
+        </button>
+        <button type="button" id="first-linkbtn-del" class="remove-bookmark-btn">Delete</button>
     </div>
+    
     
     <script src="/scripts/motivational_quotes.js"></script>
     <script src="/scripts/content.js"></script>
