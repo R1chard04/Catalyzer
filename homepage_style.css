@@ -20,6 +20,17 @@
     position: relative;
     text-align: center;
 }
+#bookmark-list{
+    background-color: turquoise;
+    width: 400px;
+    height: 50px;
+}
+a.bookmark-container{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
 input[type="text"]
 {
     background: transparent;

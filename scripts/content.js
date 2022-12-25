@@ -43,5 +43,6 @@ function updateTime(){
 function display_past_websites(){
     var website1 = localStorage.getItem('1');
     console.log('website1: ', JSON.parse(website1).name);
+    document.getElementById('first-link').href = `${JSON.parse(website1).url}`;
     document.getElementById('past_websites').innerHTML = `Bookmarked Website: ${JSON.parse(website1).name} (${JSON.parse(website1).url})`;
 }

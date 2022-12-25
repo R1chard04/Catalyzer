@@ -30,6 +30,7 @@ function addToBookmark(){
             let tab = tabs[0].url;
             var tmp = {'name': website_name, 'url': tab};
             window.localStorage.setItem('1', JSON.stringify(tmp));
+            document.getElementById('success_alert').innerHTML = "Website successfully added!"
         })
     }
 }
