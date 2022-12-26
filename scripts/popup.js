@@ -29,8 +29,18 @@ function addToBookmark(){
         chrome.tabs.query({active:true, currentWindow:true}, tabs => {
             let tab = tabs[0].url;
             var tmp = {'name': website_name, 'url': tab};
-            window.localStorage.setItem('1', JSON.stringify(tmp));
-            document.getElementById('success_alert').innerHTML = "Website successfully added!"
+            var i;
+            for (i = 1; i <= 10; i++){
+                if (window.localStorage.getItem(`${i}`) == null){
+                    window.localStorage.setItem(`${i}`, JSON.stringify(tmp));
+                    document.getElementById('success_alert').innerHTML = "Website successfully added!";
+                    break;
+                }
+                else if(i == 10){
+                    document.getElementById('success_alert').innerHTML = "Too many websites added!"
+                }
+            }
+            
         })
     }
 }

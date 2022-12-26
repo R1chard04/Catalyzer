@@ -8,6 +8,7 @@
 greet();
 setInterval(updateTime, 10);
 display_past_websites();
+delete_bookmarks();
 
   function greet(){
     var today = new Date();
@@ -41,17 +42,46 @@ function updateTime(){
 }
 
 function display_past_websites(){
-    var website1 = localStorage.getItem('1');
-    console.log('website1: ', JSON.parse(website1).url);
-    var elements = document.getElementsByClassName('website-links');
-    for (var i = 0; i < elements.length; i++){
-      elements[i].href = `${JSON.parse(website1).url}`;
-      elements[i].innerHTML = `${JSON.parse(website1).name}`;
+  var index = 0;
+    for (var i = 1; i <= 10; i++){
+      if (localStorage.getItem(`${i}`)){
+        addCode(i);
+        var elements = document.getElementsByClassName('website-links');
+        var website = localStorage.getItem(`${i}`);
+        elements[index].href = `${JSON.parse(website).url}`;
+        elements[index].innerHTML = `${JSON.parse(website).name}`;
+        index += 1;
+      }
+      
     }
 }
-
-
-document.getElementById("first-linkbtn-del").onclick = function(){
-  window.localStorage.removeItem("1");
+function addCode(i){
+  document.getElementById("bookmark-list-div").insertAdjacentHTML("beforeend", `
+    <button type="button" id="linkbtn${i}" class="bookmark-container">
+      <span>
+        <a href="chrome://newtab/" class="website-links">New Chrome Tab</a>
+      </span>
+    </button>
+    <button type="button" id="linkbtn-del${i}" class="remove-bookmark-btn">Delete</button> <br>
+  `);
 }
+
+function delete_bookmarks(){
+  if (document.getElementById('linkbtn-del1')){
+    document.getElementById("linkbtn-del1").onclick = function(){
+      window.localStorage.removeItem("1");
+    }
+  }
+  if (document.getElementById('linkbtn-del2')){
+    document.getElementById("linkbtn-del2").onclick = function(){
+      window.localStorage.removeItem("2");
+    }
+  }
+  if (document.getElementById('linkbtn-del3')){
+    document.getElementById("linkbtn-del3").onclick = function(){
+      window.localStorage.removeItem("3");
+    }
+  }
+}
+
   
