@@ -45,7 +45,7 @@ function display_past_websites(){
   var index = 0;
     for (var i = 1; i <= 10; i++){
       if (localStorage.getItem(`${i}`)){
-        addCode(i);
+        addCodeBookmarks(i);
         var elements = document.getElementsByClassName('website-links');
         var website = localStorage.getItem(`${i}`);
         elements[index].href = `${JSON.parse(website).url}`;
@@ -55,7 +55,7 @@ function display_past_websites(){
       
     }
 }
-function addCode(i){
+function addCodeBookmarks(i){
   document.getElementById("bookmark-list-div").insertAdjacentHTML("beforeend", `
     <button type="button" id="linkbtn${i}" class="bookmark-container">
       <span>
@@ -80,6 +80,41 @@ function delete_bookmarks(){
   if (document.getElementById('linkbtn-del3')){
     document.getElementById("linkbtn-del3").onclick = function(){
       window.localStorage.removeItem("3");
+    }
+  }
+  if (document.getElementById('linkbtn-del4')){
+    document.getElementById("linkbtn-del4").onclick = function(){
+      window.localStorage.removeItem("4");
+    }
+  }
+  if (document.getElementById('linkbtn-del5')){
+    document.getElementById("linkbtn-del5").onclick = function(){
+      window.localStorage.removeItem("5");
+    }
+  }
+  if (document.getElementById('linkbtn-del6')){
+    document.getElementById("linkbtn-del6").onclick = function(){
+      window.localStorage.removeItem("6");
+    }
+  }
+  if (document.getElementById('linkbtn-del7')){
+    document.getElementById("linkbtn-del7").onclick = function(){
+      window.localStorage.removeItem("7");
+    }
+  }
+  if (document.getElementById('linkbtn-del8')){
+    document.getElementById("linkbtn-del8").onclick = function(){
+      window.localStorage.removeItem("8");
+    }
+  }
+  if (document.getElementById('linkbtn-del9')){
+    document.getElementById("linkbtn-del9").onclick = function(){
+      window.localStorage.removeItem("9");
+    }
+  }
+  if (document.getElementById('linkbtn-del10')){
+    document.getElementById("linkbtn-del10").onclick = function(){
+      window.localStorage.removeItem("10");
     }
   }
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
+
 *{
     color: black;
 }
@@ -20,7 +22,7 @@
     position: relative;
     text-align: center;
 }
-.bookmark-container-heading {
+.container-heading {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -44,14 +46,14 @@
     background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
     box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
 }
-.bookmark-container-heading:hover {
+.container-heading:hover {
     background-position: 100% 0;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
-.bookmark-container-heading:focus {
+.container-heading:focus {
     outline: none;
 }
 
@@ -113,11 +115,27 @@
     height: 50px;
 }
 .remove-bookmark-btn:hover {opacity: 0.6}
-input[type="text"]
-{
-    background: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+#task-list-heading{
+    position: relative;
+    left: 1020px;
 }
+.col-3{float: left; width: 27.33%; margin: 40px 3%; position: relative;}
+.textbox {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #ccc;
+    font: 15px/24px "Lato", Arial, sans-serif; 
+    color: #333; 
+    width: 100%; box-sizing: border-box; letter-spacing: 1px;
+    background-color: transparent;
+}
+.textbox ~ .focus-border {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4caf50;
+    transition: 0.4s;
+}
+.textbox:focus ~ .focus-border{width: 100%; transition: 0.4s;}
