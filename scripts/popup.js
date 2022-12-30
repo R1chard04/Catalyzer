@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", init, false);
 function init(){
     displayName();
     addToBookmark();
-
+    addToTask();
 }
 
 //displays name on main_page
@@ -15,10 +15,6 @@ function displayName(){
     document.getElementById("nameButton").onclick = function(){
         username = document.getElementById("username").value;
         window.localStorage.setItem('name', username);
-        // chrome.tabs.query({active:true, currentWindow:true}, (tabs)=>{
-        //     window.localStorage.setItem('name', username);
-        //     chrome.tabs.sendMessage(tabs[0].id, {message:username}, (resp)=>{})
-        // })
     }
 }
 
@@ -33,14 +29,29 @@ function addToBookmark(){
             for (i = 1; i <= 10; i++){
                 if (window.localStorage.getItem(`${i}`) == null){
                     window.localStorage.setItem(`${i}`, JSON.stringify(tmp));
-                    document.getElementById('success_alert').innerHTML = "Website successfully added!";
+                    document.getElementById('success_alert_bookmark').innerHTML = "Website successfully added!";
                     break;
                 }
                 else if(i == 10){
-                    document.getElementById('success_alert').innerHTML = "Too many websites added!"
+                    document.getElementById('success_alert_bookmark').innerHTML = "Too many websites added!"
                 }
             }
-            
-        })
+        });
+    }
+}
+
+function addToTask(){
+    document.getElementById("taskButton").onclick = function(){
+        let task_name = document.getElementById("task").value;
+        for (var j = 11; j <= 20; j++){
+            if (window.localStorage.getItem(`${j}`) == null){
+                window.localStorage.setItem(`${j}`, task_name);
+                document.getElementById('success_alert_task').innerHTML = "Task successfully added!";
+                break;
+            }
+            else if (j == 10){
+                document.getElementById('success_alert_bookmark').innerHTML = "Too many tasks added!"
+            }
+        }
     }
 }

@@ -7,8 +7,12 @@
 
 greet();
 setInterval(updateTime, 10);
+
 display_past_websites();
 delete_bookmarks();
+
+display_tasks();
+delete_tasks();
 
   function greet(){
     var today = new Date();
@@ -57,12 +61,13 @@ function display_past_websites(){
 }
 function addCodeBookmarks(i){
   document.getElementById("bookmark-list-div").insertAdjacentHTML("beforeend", `
-    <button type="button" id="linkbtn${i}" class="bookmark-container">
+  <br>  
+  <button type="button" id="linkbtn${i}" class="bookmark-container">
       <span>
         <a href="chrome://newtab/" class="website-links">New Chrome Tab</a>
       </span>
     </button>
-    <button type="button" id="linkbtn-del${i}" class="remove-bookmark-btn">Delete</button> <br>
+    <button type="button" id="linkbtn-del${i}" class="remove-bookmark-btn">Delete</button> 
   `);
 }
 
@@ -119,4 +124,85 @@ function delete_bookmarks(){
   }
 }
 
-  
+function display_tasks(){
+  var index = 0;
+  for (var i = 11; i <= 20; i++){
+    if (localStorage.getItem(`${i}`)){
+      addCodeTasks(i);
+      var element = document.getElementById(`task-label${i}`);
+      var task = localStorage.getItem(`${i}`);
+      element.innerHTML = `${task}`;
+      index += 1;
+    }
+  }
+}
+
+function addCodeTasks(i){
+  document.getElementById('todolist-div').insertAdjacentHTML("beforeend", `
+    <button type="text" id="task-label${i}" class="tasks" disabled ></button>
+    <button type="button" id="taskbtn-del${i}" class="remove-bookmark-btn">Delete</button>  <br>
+  `);
+}
+
+function delete_tasks(){
+  if (document.getElementById('taskbtn-del11')){
+    document.getElementById("taskbtn-del11").onclick = function(){
+      document.getElementById("taskbtn-del11").setAttribute("disabled", true);
+      window.localStorage.removeItem("11");
+    }
+  }
+  if (document.getElementById('taskbtn-del12')){
+    document.getElementById("taskbtn-del12").onclick = function(){
+      document.getElementById("taskbtn-del12").setAttribute("disabled", true);
+      window.localStorage.removeItem("12");
+    }
+  }
+  if (document.getElementById('taskbtn-del13')){
+    document.getElementById("taskbtn-del13").onclick = function(){
+      document.getElementById("taskbtn-del13").setAttribute("disabled", true);
+      window.localStorage.removeItem("13");
+    }
+  }
+  if (document.getElementById('taskbtn-del14')){
+    document.getElementById("taskbtn-del14").onclick = function(){
+      document.getElementById("taskbtn-del14").setAttribute("disabled", true);
+      window.localStorage.removeItem("14");
+    }
+  }
+  if (document.getElementById('taskbtn-del15')){
+    document.getElementById("taskbtn-del15").onclick = function(){
+      document.getElementById("taskbtn-del15").setAttribute("disabled", true);
+      window.localStorage.removeItem("15");
+    }
+  }
+  if (document.getElementById('taskbtn-del16')){
+    document.getElementById("taskbtn-del16").onclick = function(){
+      document.getElementById("taskbtn-del16").setAttribute("disabled", true);
+      window.localStorage.removeItem("16");
+    }
+  }
+  if (document.getElementById('taskbtn-del17')){
+    document.getElementById("taskbtn-del17").onclick = function(){
+      document.getElementById("taskbtn-del17").setAttribute("disabled", true);
+      window.localStorage.removeItem("17");
+    }
+  }
+  if (document.getElementById('taskbtn-del18')){
+    document.getElementById("taskbtn-del18").onclick = function(){
+      document.getElementById("taskbtn-del18").setAttribute("disabled", true);
+      window.localStorage.removeItem("18");
+    }
+  }
+  if (document.getElementById('taskbtn-del19')){
+    document.getElementById("taskbtn-del19").onclick = function(){
+      document.getElementById("taskbtn-del19").setAttribute("disabled", true);
+      window.localStorage.removeItem("19");
+    }
+  }
+  if (document.getElementById('taskbtn-del20')){
+    document.getElementById("taskbtn-del20").onclick = function(){
+      document.getElementById("taskbtn-del20").setAttribute("disabled", true);
+      window.localStorage.removeItem("20");
+    }
+  }
+}
