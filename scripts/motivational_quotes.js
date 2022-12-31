@@ -1,3 +1,4 @@
+//Sourced from https://www.shopify.com/ca/blog/motivational-quotes
 const quotes = [
     "“We cannot solve problems with the kind of thinking we employed when we came up with them.” — Albert Einstein",
     "“Learn as if you will live forever, live like you will die tomorrow.” — Mahatma Gandhi",
@@ -5,8 +6,36 @@ const quotes = [
     "“When you give joy to other people, you get more joy in return. You should give a good thought to happiness that you can give out.”— Eleanor Roosevelt",
     "“When you change your thoughts, remember to also change your world.”—Norman Vincent Peale",
     "“It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest. —Walter Anderson",
-    "“Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.”—Diane McLaren"
-
+    "“Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.”—Diane McLaren",
+    "\"Success is not final; failure is not fatal: It is the courage to continue that counts\" — Winston S. Churchill",
+    "\"It is better to fail in originality than to succeed in imitation.\" — Herman Melville",
+    "\"The road to success and the road to failure are almost exactly the same.\" — Colin R. Davis",
+    "\“Success usually comes to those who are too busy looking for it.\” — Henry David Thoreau",
+    "\“Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.\” —Dale Carnegie",
+    "\“The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.\" — Winston Churchill",
+    "\“If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.\” — Steve Jobs",
+    "\“I’m a greater believer in luck, and I find the harder I work the more I have of it.\” — Thomas Jefferson",
+    "\“He who conquers himself is the mightiest warrior.\” — Confucius",
+    "\“The elevator to success is out of order. You’ll have to use the stairs, one step at a time.\” — Joe Girard",
+    "\“I’d rather regret the things I’ve done than regret the things I haven’t done.\” —Lucille Ball",
+    "\“Inspiration does exist, but it must find you working.\” —Pablo Picasso",
+    "\“Don't settle for average. Bring your best to the moment. Then, whether it fails or succeeds, at least you know you gave all you had.\” —Angela Bassett",
+    "\“Someone's sitting in the shade today because someone planted a tree a long time ago.\” —Warren Buffet",
+    "\“The only way of discovering the limits of the possible is to venture a little way past them into the impossible.\” ―Arthur C. Clarke",
+    "\“I will not lose, for even in defeat, there’s a valuable lesson learned, so it evens up for me.\” —Jay-Z",
+    "\“Our greatest glory is not in never falling, but in rising every time we fall.\” — Confucius",
+    "\“It's fine to celebrate success but it is more important to heed the lessons of failure.\” — Bill Gates",
+    "\"I can’t tell you how many times I’ve been given a no. Only to find that a better, brighter, bigger yes was right around the corner.\” — Arlan Hamilton",
+    "\“When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.\” — Henry Ford",
+    "\“We are what we repeatedly do. Excellence, then, is not an act, but a habit.\” — Aristotle",
+    "\“I have not failed. I've just found 10,000 ways that won't work.\” — Thomas A. Edison",
+    "\“Ideation without execution is delusion.\” — Robin Sharma",
+    "\“True humility is not thinking less of yourself; it is thinking of yourself less.\” — C.S. Lewis",
+    "\“If there is no struggle, there is no progress.\” —Frederick Douglass",
+    "\"You can be the ripest, juiciest peach in the world, and there's still going to be somebody who hates peaches.\" —Dita Von Teese",
+    "\“Keep your eyes on the stars, and your feet on the ground.\” ―Theodore Roosevelt",
+    "\“Perfection is not attainable. But if we chase perfection we can catch excellence.\” —Vince Lombardi",
+    "\“Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.\” —Helen Keller"
 ];
 
 var quote = document.getElementById('motivational_quotes');
