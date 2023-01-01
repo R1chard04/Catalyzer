@@ -1,3 +1,9 @@
+h1 {
+    font-family: Marvel;
+    font-size: 25pt;
+
+}
+
 .add-task-textbox {
     border: 0;
     padding: 7px 0;
@@ -68,3 +74,8 @@ button {
     color: #333;
     background-color: #00a7fc;
   }
+
+  .input-headings {
+    font-family: Marvel;
+    font-size: 14pt;
+}
