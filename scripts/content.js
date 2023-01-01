@@ -1,10 +1,3 @@
-// chrome.runtime.onMessage.addListener((request, sender, sendMessage)=>{
-//     value = request.message;
-//     console.log(value);
-
-//     greet();
-//   });
-
 greet();
 setInterval(updateTime, 10);
 

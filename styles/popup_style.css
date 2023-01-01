@@ -1,0 +1,70 @@
+.add-task-textbox {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #ccc;
+    font: 15px/24px "Lato", Arial, sans-serif; 
+    color: #333; 
+    width: 100%; box-sizing: border-box; letter-spacing: 1px;
+    background-color: transparent;
+}
+.add-task-textbox ~ .focus-border {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4caf50;
+    transition: 0.4s;
+}
+.add-task-textbox:focus ~ .focus-border{width: 100%; transition: 0.4s;}
+
+button {
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Marvel;
+    font-size: 12pt;
+    width: 200px;
+    height: 45px;
+    position: relative;
+    border: solid #bbb 2px;
+    color: #bbb;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  button:focus {
+    outline: none;
+  }
+
+  .popup-button {
+    background: #333;
+  }
+  .popup-button:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: green;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+  }
+  .popup-button:hover:before {
+    transform: scale(1);
+  }
+  .popup-button:hover {
+    color: #f1f1f1;
+    border-color: green;
+  }
+  .popup-button:active:before {
+    background-color: #00a7fc;
+  }
+  .popup-button:active {
+    border-color: #00a7fc;
+    color: #333;
+    background-color: #00a7fc;
+  }

@@ -1,9 +1,7 @@
-// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-// });
-
 document.addEventListener("DOMContentLoaded", init, false);
 
 function init(){
+    document.getElementById("username").value = window.localStorage.getItem('name');
     displayName();
     addToBookmark();
     addToTask();

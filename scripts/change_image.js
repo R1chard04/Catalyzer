@@ -1,10 +1,3 @@
-// const randomFile = require('select-random-file')
-
-// const dir = '/background_images';
-// randomFile(dir, (err, file) => {
-//     console.log('The random file is: ${file}.');
-// })
-
 changeImage();
 
 function changeImage(){
